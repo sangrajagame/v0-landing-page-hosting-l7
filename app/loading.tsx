@@ -1,14 +1,10 @@
+import PatternBackground from "@/components/pattern-background"
+
 export default function Loading() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-neutral-950 text-white">
-      {/* Background gradients / blobs (match page for seamless transition) */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-32 -left-24 h-96 w-96 rounded-full bg-emerald-500/20 blur-3xl" />
-        <div className="absolute top-1/3 -right-20 h-[28rem] w-[28rem] rounded-full bg-fuchsia-500/20 blur-3xl" />
-        <div className="absolute bottom-0 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-amber-400/10 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(60rem_60rem_at_120%_-10%,rgba(255,255,255,0.06),rgba(255,255,255,0))]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05),rgba(255,255,255,0.02))]" />
-      </div>
+      {/* Patterned background */}
+      <PatternBackground />
 
       <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-neutral-950/60 backdrop-blur">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">

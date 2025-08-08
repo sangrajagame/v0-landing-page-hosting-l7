@@ -9,20 +9,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { Rocket, Server, Globe, Shield, Zap, Database, Lock, Check, ArrowRight, Star, Clock, PhoneCall, DollarSign } from 'lucide-react'
+import { Server, Globe, Shield, Zap, Database, Lock, Check, ArrowRight, Star, Clock, PhoneCall, DollarSign } from 'lucide-react'
 import DomainSearch from "@/components/domain-search"
+import PatternBackground from "@/components/pattern-background"
 
 export default function Page() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-neutral-950 text-white">
-      {/* Background gradients / blobs */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -top-32 -left-24 h-96 w-96 rounded-full bg-emerald-500/20 blur-3xl" />
-        <div className="absolute top-1/3 -right-20 h-[28rem] w-[28rem] rounded-full bg-fuchsia-500/20 blur-3xl" />
-        <div className="absolute bottom-0 left-1/2 h-80 w-80 -translate-x-1/2 rounded-full bg-amber-400/10 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(60rem_60rem_at_120%_-10%,rgba(255,255,255,0.06),rgba(255,255,255,0))]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05),rgba(255,255,255,0.02))]" />
-      </div>
+      <PatternBackground />
 
       <Header />
 
@@ -63,11 +57,12 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-neutral-950/60 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/50">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="#" className="group inline-flex items-center gap-2" aria-label="CloudHost beranda">
-          <div className="rounded-md bg-white/10 p-2 ring-1 ring-inset ring-white/20 backdrop-blur">
-            <Rocket className="h-5 w-5 text-emerald-400 transition-transform group-hover:rotate-12" />
+        <Link href="#" className="group inline-flex items-center gap-2" aria-label="HostingKilat beranda">
+          <div className="relative overflow-hidden rounded-md bg-white/10 p-2 ring-1 ring-inset ring-white/20 backdrop-blur">
+            <span className="pointer-events-none absolute inset-0 rounded-md bg-emerald-500/10 opacity-0 transition-opacity group-hover:opacity-100" />
+            <Zap className="h-5 w-5 text-emerald-400 transition-transform motion-safe:animate-pulse group-hover:rotate-12" />
           </div>
-          <span className="text-lg font-semibold tracking-tight">CloudHost</span>
+          <span className="text-lg font-semibold tracking-tight">HostingKilat</span>
         </Link>
 
         <nav aria-label="Navigasi utama" className="hidden items-center gap-6 md:flex">
@@ -389,7 +384,7 @@ function Testimonials() {
     <div className="py-16 sm:py-20">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Dicintai pelanggan</h2>
-        <p className="mt-3 text-white/70">Dengarkan cerita mereka yang sudah beralih ke CloudHost.</p>
+        <p className="mt-3 text-white/70">Dengarkan cerita mereka yang sudah beralih ke HostingKilat.</p>
       </div>
       <div className="mt-10 grid gap-4 md:grid-cols-3">
         {items.map((t, i) => (
@@ -493,9 +488,9 @@ function Footer() {
       <div className="container mx-auto flex flex-col items-center justify-between gap-6 px-4 sm:flex-row">
         <div className="flex items-center gap-2">
           <div className="rounded-md bg-white/10 p-2 ring-1 ring-inset ring-white/20 backdrop-blur">
-            <Rocket className="h-4 w-4 text-emerald-300" />
+            <Zap className="h-4 w-4 text-emerald-300 motion-safe:animate-pulse" />
           </div>
-          <span className="text-sm text-white/80">© {new Date().getFullYear()} CloudHost</span>
+          <span className="text-sm text-white/80">© {new Date().getFullYear()} HostingKilat</span>
         </div>
         <div className="flex items-center gap-6 text-sm text-white/70">
           <Link href="#" className="hover:text-white">
