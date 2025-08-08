@@ -12,13 +12,14 @@ import {
 import { Server, Globe, Shield, Zap, Database, Lock, Check, ArrowRight, Star, Clock, PhoneCall, DollarSign } from 'lucide-react'
 import DomainSearch from "@/components/domain-search"
 import PatternBackground from "@/components/pattern-background"
+import SiteHeader from "@/components/site-header"
 
 export default function Page() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-neutral-950 text-white">
       <PatternBackground />
 
-      <Header />
+      <SiteHeader />
 
       <main className="relative">
         <Hero />
@@ -50,46 +51,6 @@ export default function Page() {
 
       <Footer />
     </div>
-  )
-}
-
-function Header() {
-  return (
-    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-neutral-950/60 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/50">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="#" className="group inline-flex items-center gap-2" aria-label="HostingKilat beranda">
-          <div className="relative overflow-hidden rounded-md bg-white/10 p-2 ring-1 ring-inset ring-white/20 backdrop-blur">
-            <span className="pointer-events-none absolute inset-0 rounded-md bg-emerald-500/10 opacity-0 transition-opacity group-hover:opacity-100" />
-            <Zap className="h-5 w-5 text-emerald-400 transition-transform motion-safe:animate-pulse group-hover:rotate-12" />
-          </div>
-          <span className="text-lg font-semibold tracking-tight">HostingKilat</span>
-        </Link>
-
-        <nav aria-label="Navigasi utama" className="hidden items-center gap-6 md:flex">
-          <a className="text-sm text-white/80 transition-colors hover:text-white" href="#features">
-            Fitur
-          </a>
-          <a className="text-sm text-white/80 transition-colors hover:text-white" href="#pricing">
-            Harga
-          </a>
-          <a className="text-sm text-white/80 transition-colors hover:text-white" href="#testimonials">
-            Testimoni
-          </a>
-          <a className="text-sm text-white/80 transition-colors hover:text-white" href="#faq">
-            FAQ
-          </a>
-        </nav>
-
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" className="hidden text-white/80 hover:bg-white/10 hover:text-white md:inline-flex">
-            Masuk
-          </Button>
-          <Button className="bg-emerald-500 text-neutral-950 hover:bg-emerald-400">
-            Mulai Gratis
-          </Button>
-        </div>
-      </div>
-    </header>
   )
 }
 
